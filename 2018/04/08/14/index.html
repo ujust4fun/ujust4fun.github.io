@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="叙述了存在于爱中的依赖性、关注、死亡的风险、独立与自律。">
+<meta name="description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人生苦难重重 &lt;3&gt;">
-<meta property="og:url" content="https://ujust4fun.github.io/2018/03/18/7/index.html">
+<meta property="og:title" content="dll与lib的区别">
+<meta property="og:url" content="https://ujust4fun.github.io/2018/04/08/14/index.html">
 <meta property="og:site_name" content="不二">
-<meta property="og:description" content="叙述了存在于爱中的依赖性、关注、死亡的风险、独立与自律。">
+<meta property="og:description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-23T11:52:42.304Z">
+<meta property="og:updated_time" content="2018-04-08T09:54:18.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人生苦难重重 &lt;3&gt;">
-<meta name="twitter:description" content="叙述了存在于爱中的依赖性、关注、死亡的风险、独立与自律。">
+<meta name="twitter:title" content="dll与lib的区别">
+<meta name="twitter:description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://ujust4fun.github.io/2018/03/18/7/"/>
+  <link rel="canonical" href="https://ujust4fun.github.io/2018/04/08/14/"/>
 
 
 
 
 
-  <title>人生苦难重重 <3> | 不二</title>
+  <title>dll与lib的区别 | 不二</title>
   
 
 
@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2018/03/18/7/">
+    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2018/04/08/14/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ujust4fun">
@@ -276,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">人生苦难重重 <3></h1>
+          <h1 class="post-title" itemprop="name headline">dll与lib的区别</h1>
         
 
         <div class="post-meta">
@@ -288,8 +288,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-18T13:20:23+08:00">
-                2018-03-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-08T17:34:47+08:00">
+                2018-04-08
               </time>
             
 
@@ -311,8 +311,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/note/" itemprop="url" rel="index">
-                    <span itemprop="name">note</span>
+                  <a href="/categories/windows/" itemprop="url" rel="index">
+                    <span itemprop="name">windows</span>
                   </a>
                 </span>
 
@@ -330,8 +330,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/18/7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/03/18/7/" itemprop="commentsCount"></span>
+                <a href="/2018/04/08/14/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/04/08/14/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -340,7 +340,7 @@
 
           
           
-             <span id="/2018/03/18/7/" class="leancloud_visitors" data-flag-title="人生苦难重重 <3>">
+             <span id="/2018/04/08/14/" class="leancloud_visitors" data-flag-title="dll与lib的区别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,990
+                  933
                 </span>
               
 
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  10
+                  3
                 </span>
               
             </div>
@@ -402,19 +402,28 @@
       
 
       
-        <p>　　叙述了存在于爱中的依赖性、关注、死亡的风险、独立与自律。<br><a id="more"></a></p>
-<h4 id="依赖性"><a href="#依赖性" class="headerlink" title="依赖性"></a>依赖性</h4><p>　　一种最常见的对爱的误解,就是将依赖性当成真正的爱。过分的依赖感，确切地说,那是寄生心理。没有别人就无法生存,意味着你是个寄生者,而对方是寄主。恋人之间的关系和感情,没有自由的成分。是因为需要而不是爱,才结合在一起的。真正的爱是自由的选择。真正相爱的人,不一定非要生活在一起,充其量只是选择一起生活罢了。没有别人的关心和照顾,就认为人生不够完整,以致无法正常生活,这就构成了心理学上的“依赖性”。过分的依赖只能导致病态。当然,我们必须区分病态的依赖和通常对于依赖的渴望。人人都有依赖的需求和渴望,都希望有更强大、更有力的人关心自己。不管我们看起来多么强壮,也不管我们花多大的心思,竭力做出无须关心的样子,但从内心深处,我们都渴望过依赖他人的感觉。消极性依赖心理的特征之一,是缺乏真正的爱。在他们的心里,世界无情而混乱,别人总以异样的眼光对待他们。他们对自己的价值深深地怀疑,所以长大以后,他们不顾一切地寻求他人的爱,甚至到了不择手段的地步。他们尽可能维系同别人的情感关系,宁愿牺牲对方的独立和自由,这样一来,更容易使彼此的关系出现障碍。只想获取却不愿付出,心智就会永远停留在婴儿期,这只会对人生构成限制和束缚,只会给人际关系造成破坏,而不会使情感走向完满,也会使卷入其中的人跟着遭殃。</p>
-<h4 id="关注"><a href="#关注" class="headerlink" title="关注"></a>关注</h4><p>　　爱最重要的体现形式,就是关注。我们爱某个人,一定会关注对方,进而帮助对方成长。我们必须把成见放到一边,调整心理状态,满足对方的需要。我们对对方的关注,是出自自我意愿、摒弃惰性的行为。著名心理学家罗洛梅说过:“</p>
-<blockquote>
-<p> 如果用现代心理分析工具,去分析每个人爱的意愿,我们就会发现,爱的意愿的本质,其实是一种关注。为了完成意愿所需要的努力,就是关注的努力。我们要让头脑清醒,让心智健全,这是体现关注的基本要素。”</p>
-</blockquote>
-<p>　　体现关注,一种最常见、最重要的方式,就是“倾听”。我们大部分时间都在听别人说话,可多数人却不懂得如何倾听。倾听不是容易的事,因此更应认真对待,不能敷衍了事。倾听是对他人表达关怀的具体表现。大部分人不懂得倾听,是没有意识到倾听的重要性,或者不愿意为此付出努力。<br>　　真正的倾听,意味着把注意力放在他人身上,它是爱的具体表现形式。此时,倾听者能够暂时把个人想法和欲望放在一旁,尽可能地体会说话者的感受。说话者和倾听者都能感受到爱的力量,进而都能实现自我完善。倾听者把注意力放在对方的话语上,会使说话者心有灵犀,更为坦诚,更愿把心灵全部敞开,而不是有所隐藏。这能增进双方的理解和信任,心心相印,共同跳起爱的“双人芭蕾舞”。这是耗费精力的过程,而且须以爱为出发点。基于共同成长、自我完善的意愿,才能够达到倾听的目的。但是,我们通常缺少倾听的能力。不管是在商务活动还是在社交生活中,长时间倾听他人讲话,是叫人难受的事。我们只是有选择地倾听,头脑中早已有优先项目安排,所以,我们总是一边倾听,一边想着怎样尽快达到目的,怎样使谈话尽早结束。我们也常常转移话题,灵活地把谈话主旨加以调整,以便让自己感到满意。</p>
-<h4 id="死亡的风险"><a href="#死亡的风险" class="headerlink" title="死亡的风险"></a>死亡的风险</h4><p>　　爱是行动,爱需要与懒惰对抗,与恐惧较量。当我们从“爱的行动”转向“爱的勇气”。爱,就意味着自我完善,即让自我进入陌生领域,塑造出不同的、崭新的自我。在此过程中,我们接触的是从未接触过的事物,并由此获得改变。不熟悉的环境、不同的规章制度、陌生的人、事物和活动,都可能使我们面对痛苦,并由此而产生畏惧。人人都有对抗畏惧的方式,我们宁可拒绝改变,也不愿忍受改变带来的痛苦,此时,我们最需要的就是勇气。勇气,不意味着永不恐惧,而是面对恐惧也能坦然行动,克服畏缩心理,大步走向未知的未来。在某种意义上,心智的成熟(也即爱的实质)需要勇气,也需要冒险。<br>　　在自我完善的过程中,除了痛苦和悲伤,你同样可以收获快乐和幸福。完整意义的人生,势必伴随着痛苦,其中最大的痛苦之一,就是面对心爱之人或心爱之物的死亡。如果你想避免其中的痛苦,那你恐怕只有完全脱离现实,去过一种没有任何意义的生活。生命的本质,就是不断改变、成长和衰退的过程。选择了生活与成长,也就选择了面对死亡的可能性。我们应该坦然接受死亡,不妨把它当成“永远的伴侣”,想象它始终与我们并肩而行。我们甚至应该像死侍那样,把死亡当成“最忠实的朋友”。也许这听上去有些可怕,却可以丰富心灵,让我们变得更加睿智、理性和现实。在“死亡”的指引下,我们会清醒地意识到:人生短暂,爱的时间有限,我们应该好好珍惜和把握。不敢正视死亡,就无法获得人生的真谛,无法理解什么是爱,什么是生活。万物永远处在变化中,死亡是一种正常现象,不肯接受这一事实,我们就永远无法体味生命宏大的意义。</p>
-<h4 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h4><p>　　人生就是一种冒险。你投入的爱越多,经受的风险也就越大。我们一生要经历数以千计乃至百万计的风险,而最大的风险就是自我成长,也就是走出童年的朦胧和混沌状态,迈向成年的理智和清醒。这是了不起的人生跨越,它相当于跃向前方的奋力一跳,而不是随意迈出的一小步。很多人一生都未实现这种跨越,他们貌似成人,有时也小有成就,但直到寿终正寝之际,其心理仍远未成熟,甚至从未摆脱父母的影响,从未获得真正的独立。<br>　　成长的过程极为缓慢,除了大步跳跃以外,还包括进入未知天地的无数次小规模跨越。很多人从未有过大规模跳跃,也就无法实现真正意义的成长。尽管他们看上去像个成年人,心理上却仍对父母有很大的依赖性。他们沿袭上一代的价值标准,做任何事都要得到父母的“批准”,即使父母早已离开人世,他们心理上仍旧难以摆脱依赖的情结。他们从来不能真正主宰自己的命运。一个人必须大踏步前进,实现完整的自我,获得心灵的独立。尊重自我的个性和愿望,敢于冒险进入未知领域,才能够活得自由自在,且使心智不断成熟,体验到爱的至高境界。放弃真正的自我,我们就无法进入爱的至高境界。至高境界的爱,必然是自由状态下的自主选择,而不是亦步亦趋、墨守成规,不是被动而消极地抗拒心灵的呼唤。<br>　　诗人纪伯伦曾这样谈到婚姻中“寂寞的智慧”:</p>
-<blockquote>
-<p>你们的结合要保留空隙,<br>让天堂的风在你们中间舞动。<br>彼此相爱,但不要制造爱的枷锁,<br>在你们灵魂的两岸之间,让爱成为涌动的海洋。<br>倒满彼此的酒杯,但不可只从一个杯子啜饮,分享你们的面包,但不可只把同一块面包享用。<br>一起欢笑,载歌载舞,<br>但容许对方的独处,<br>就像琵琶的弦,<br>虽然在同一首音乐中颤动,<br>然而你是你,我是我,彼此独立。<br>交出你的心灵,但不是由对方保管,<br>因为惟有生命之手,才能容纳你的心灵。<br>站在一起,却不可太过接近,<br>君不见,寺庙的梁柱各自耸立,<br>橡树与松柏,也不在彼此的阴影中成长。</p>
-</blockquote>
-<h4 id="爱的自律"><a href="#爱的自律" class="headerlink" title="爱的自律"></a>爱的自律</h4><p>　　自律的力量来自于爱,而爱的本质是一种意愿。自律,是将爱转化为实际行动的过程。所有的爱,都离不开自律。真正懂得爱的人,必然懂得自我约束,以此促进对方心智的成熟。真正的活力与热情,离不开深刻而真挚的情感。恣意、放纵、漫无节制的情感,绝不会比自我约束的情感更为深刻。古代谚语说:“浅水喧闹,深潭无波。”真正掌握和控制情感的人,不仅不会缺少激情和活力,而且能使情感更为深刻和成熟。<br>　　爱”是一种极其特殊的情感,必须适当地约束。爱的感觉,能产生创造性的活力。但是,假如不加约束,任由其猖獗肆虐,爱就会变成逃出牢笼的野兽,它不仅不会成为真正的爱,而且会造成极为混乱的局面。真正的爱,需要自我完善,需要付出必要的精力,而我们精力总归有限,不可能疯狂地去爱每一个人。在有限的生命里,有限的爱只能给予少数特定的对象。超过能力的限制,对我们的爱不加控制,无疑是自欺欺人,到头来事与愿违,给爱的对象带来伤害。即便很多人需要爱和关心,我们也必须有所选择,确定谁更适合作为爱的对象,谁更值得我们付出真正的爱。可以想象,这是艰难的选择,有时还会让你痛苦。你需要权衡多种因素,做出最终决定。你选择的爱的对象,应该能够通过你的帮助,迅速促进个人心智的成熟。事实上,许多人把心灵藏在厚厚的盔甲里,你想以实际行动去滋养他们的心灵,并为此付出了不懈的努力,但最终却无济于事———对于这样的人,应该及早选择放弃,因为你不管如何倾注自己的爱,都无法使对方的心灵获得成长,就如同在干旱的土地上播种粮食,只能白白浪费时间和精力。真正的爱珍贵而有限,应该倍加珍惜,妥善使用。</p>
+        <p>　　配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者<a href="http://blog.csdn.net/jhgameboy/article/details/23710429" target="_blank" rel="noopener">jhgameboy</a>。</p>
+<a id="more"></a>
+<h4 id="关于lib和dll的区别如下"><a href="#关于lib和dll的区别如下" class="headerlink" title="关于lib和dll的区别如下"></a>关于lib和dll的区别如下</h4><ol>
+<li>lib是编译时用到的，dll是运行时用到的。如果要完成源代码的编译，只需要lib；如果要使动态链接的程序运行起来，只需要dll。</li>
+<li>如果有dll文件，那么lib一般是一些索引信息，记录了dll中函数的入口和位置，dll中是函数的具体内容；如果只有lib文件，那么这个lib文件是静态编译出来的，索引和实现都在其中。使用静态编译的lib文件，在运行程序时不需要再挂动态库，缺点是导致应用程序比较大，而且失去了动态库的灵活性，发布新版本时要发布新的应用程序才行。</li>
+<li>动态链接的情况下，有两个文件：一个是LIB文件，一个是DLL文件。LIB包含被DLL导出的函数名称和位置，DLL包含实际的函数和数据，应用程序使用LIB文件链接到DLL文件。在应用程序的可执行文件中，存放的不是被调用的函数代码，而是DLL中相应函数代码的地址，从而节省了内存资源。DLL和LIB文件必须随应用程序一起发行，否则应用程序会产生错误。如果不想用lib文件或者没有lib文件，可以用WIN32 API函数LoadLibrary、GetProcAddress装载。</li>
+</ol>
+<h4 id="使用lib需注意两个文件"><a href="#使用lib需注意两个文件" class="headerlink" title="使用lib需注意两个文件"></a>使用lib需注意两个文件</h4><ol>
+<li>.h头文件，包含lib中说明输出的类或符号原型或数据结构。应用程序调用lib时，需要将该文件包含入应用程序的源文件中。</li>
+<li>.LIB文件，略。</li>
+</ol>
+<h4 id="使用dll需注意三个文件"><a href="#使用dll需注意三个文件" class="headerlink" title="使用dll需注意三个文件"></a>使用dll需注意三个文件</h4><ol>
+<li>.h头文件，包含dll中说明输出的类或符号原型或数据结构的.h文件。应用程序调用dll时，需要将该文件包含入应用程序的源文件中;</li>
+<li>.LIB文件，是dll在编译、链接成功之后生成的文件，作用是当其他应用程序调用dll时，需要将该文件引入应用程序，否则产生错误;</li>
+<li>.dll文件，真正的可执行文件，开发成功后的应用程序在发布时，只需要有.exe文件和.dll文件，并不需要.lib文件和.h头文件。</li>
+</ol>
+<h4 id="使用lib的方法"><a href="#使用lib的方法" class="headerlink" title="使用lib的方法"></a>使用lib的方法</h4><ol>
+<li>静态lib中，一个lib文件实际上是任意个obj文件的集合，obj文件是cpp文件编译生成的。在编译这种静态库工程时，根本不会遇到链接错误；即使有错，也只会在使用这个lib的EXT文件或者DLL工程里暴露出来;</li>
+<li>在VC中新建一个static library类型的工程Lib，加入test.cpp文件和test.h文件（头文件内包括函数声明），然后编译，就生成了Lib.lib文件。</li>
+<li>别的工程要使用这个lib有两种方式：在project-&gt;link-&gt;Object/Library Module中加入Lib.lib文件（先查询工程目录，再查询系统Lib目录)；或者在源代码中加入指令#pragma comment(lib, “Lib.lib”);将Lib.lib拷入工程所在目录，或者执行文件生成的目录，或者系统Lib目录中;加入相应的头文件test.h</li>
+</ol>
+<h4 id="使用DLL的方法"><a href="#使用DLL的方法" class="headerlink" title="使用DLL的方法"></a>使用DLL的方法</h4><p>　　使用动态链接中的lib，不是obj文件的集合，即里面不会有实际的实现，它只是提供动态链接到DLL所需要的信息，这种lib可以在编译一个DLL工程时由编译器生成。DLL的使用方法有两种。</p>
 
       
     </div>
@@ -460,8 +469,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/05/5/" rel="next" title="人生苦难重重 <2>">
-                <i class="fa fa-chevron-left"></i> 人生苦难重重 <2>
+              <a href="/2018/04/08/13/" rel="next" title="windows10+github+vs2017配置">
+                <i class="fa fa-chevron-left"></i> windows10+github+vs2017配置
               </a>
             
           </div>
@@ -470,8 +479,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/18/8/" rel="prev" title="二月二">
-                二月二 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/08/10/" rel="prev" title="凝固在时间里的主宰">
+                凝固在时间里的主宰 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -666,7 +675,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖性"><span class="nav-number">1.</span> <span class="nav-text">依赖性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关注"><span class="nav-number">2.</span> <span class="nav-text">关注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#死亡的风险"><span class="nav-number">3.</span> <span class="nav-text">死亡的风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#独立"><span class="nav-number">4.</span> <span class="nav-text">独立</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#爱的自律"><span class="nav-number">5.</span> <span class="nav-text">爱的自律</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于lib和dll的区别如下"><span class="nav-number">1.</span> <span class="nav-text">关于lib和dll的区别如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用lib需注意两个文件"><span class="nav-number">2.</span> <span class="nav-text">使用lib需注意两个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用dll需注意三个文件"><span class="nav-number">3.</span> <span class="nav-text">使用dll需注意三个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用lib的方法"><span class="nav-number">4.</span> <span class="nav-text">使用lib的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用DLL的方法"><span class="nav-number">5.</span> <span class="nav-text">使用DLL的方法</span></a></li></ol></div>
             
 
           </div>
@@ -850,7 +859,7 @@ var jiathis_config={
 		_hcwp.push({widget:"Bloggerstream", widget_id: 102560, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 102560, xid: "2018/03/18/7/"});
+		_hcwp.push({widget:"Stream", widget_id: 102560, xid: "2018/04/08/14/"});
 		
 
 		(function() {
