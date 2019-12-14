@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
+<meta name="description" content="去而复返，忽而焉之吾不归？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dll与lib的区别">
-<meta property="og:url" content="https://ujust4fun.github.io/2018/04/08/14/index.html">
+<meta property="og:title" content="the-Markoviam-in-human">
+<meta property="og:url" content="https://ujust4fun.github.io/2019/12/13/21/index.html">
 <meta property="og:site_name" content="阿炳的深渊小屋">
-<meta property="og:description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
+<meta property="og:description" content="去而复返，忽而焉之吾不归？">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-08T09:54:18.476Z">
+<meta property="og:updated_time" content="2019-12-14T04:22:38.059Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dll与lib的区别">
-<meta name="twitter:description" content="配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者jhgameboy。">
+<meta name="twitter:title" content="the-Markoviam-in-human">
+<meta name="twitter:description" content="去而复返，忽而焉之吾不归？">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://ujust4fun.github.io/2018/04/08/14/"/>
+  <link rel="canonical" href="https://ujust4fun.github.io/2019/12/13/21/"/>
 
 
 
 
 
-  <title>dll与lib的区别 | 阿炳的深渊小屋</title>
+  <title>the-Markoviam-in-human | 阿炳的深渊小屋</title>
   
 
 
@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2018/04/08/14/">
+    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2019/12/13/21/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="阿炳">
@@ -276,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">dll与lib的区别</h1>
+          <h1 class="post-title" itemprop="name headline">the-Markoviam-in-human</h1>
         
 
         <div class="post-meta">
@@ -288,8 +288,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-08T17:34:47+08:00">
-                2018-04-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T23:49:44+08:00">
+                2019-12-13
               </time>
             
 
@@ -311,8 +311,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
                   </a>
                 </span>
 
@@ -330,8 +330,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/08/14/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/04/08/14/" itemprop="commentsCount"></span>
+                <a href="/2019/12/13/21/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2019/12/13/21/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -340,7 +340,7 @@
 
           
           
-             <span id="/2018/04/08/14/" class="leancloud_visitors" data-flag-title="dll与lib的区别">
+             <span id="/2019/12/13/21/" class="leancloud_visitors" data-flag-title="the-Markoviam-in-human">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  933
+                  1,072
                 </span>
               
 
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  5
                 </span>
               
             </div>
@@ -402,28 +402,250 @@
       
 
       
-        <p>　　配置opengl的VS环境时遇到的困惑,lib是静态的链接，dll是动态的链接。原文的作者<a href="http://blog.csdn.net/jhgameboy/article/details/23710429" target="_blank" rel="noopener">jhgameboy</a>。</p>
-<a id="more"></a>
-<h4 id="关于lib和dll的区别如下"><a href="#关于lib和dll的区别如下" class="headerlink" title="关于lib和dll的区别如下"></a>关于lib和dll的区别如下</h4><ol>
-<li>lib是编译时用到的，dll是运行时用到的。如果要完成源代码的编译，只需要lib；如果要使动态链接的程序运行起来，只需要dll。</li>
-<li>如果有dll文件，那么lib一般是一些索引信息，记录了dll中函数的入口和位置，dll中是函数的具体内容；如果只有lib文件，那么这个lib文件是静态编译出来的，索引和实现都在其中。使用静态编译的lib文件，在运行程序时不需要再挂动态库，缺点是导致应用程序比较大，而且失去了动态库的灵活性，发布新版本时要发布新的应用程序才行。</li>
-<li>动态链接的情况下，有两个文件：一个是LIB文件，一个是DLL文件。LIB包含被DLL导出的函数名称和位置，DLL包含实际的函数和数据，应用程序使用LIB文件链接到DLL文件。在应用程序的可执行文件中，存放的不是被调用的函数代码，而是DLL中相应函数代码的地址，从而节省了内存资源。DLL和LIB文件必须随应用程序一起发行，否则应用程序会产生错误。如果不想用lib文件或者没有lib文件，可以用WIN32 API函数LoadLibrary、GetProcAddress装载。</li>
+        <p>去而复返，忽而焉之吾不归？<br><a id="more"></a><br>前天突然心血来潮，想把自己的博客转移回来并重新开张。于是，时刻一年我重新把博客搭建了起来。有了之前的基础，我只需要再次购买域名，然后修改几个基础文件，一切就恢复如初了。</p>
+<hr>
+<font color="red"> 这篇就当熟悉下md的基本语法吧，好多东西都遗忘了。 </font>
+
+<hr>
+<h1 id="这里是一级标题"><a href="#这里是一级标题" class="headerlink" title="这里是一级标题"></a>这里是一级标题</h1><h2 id="这里是二级标题"><a href="#这里是二级标题" class="headerlink" title="这里是二级标题"></a>这里是二级标题</h2><h3 id="这里是三级标题"><a href="#这里是三级标题" class="headerlink" title="这里是三级标题"></a>这里是三级标题</h3><h4 id="这里是四级标题"><a href="#这里是四级标题" class="headerlink" title="这里是四级标题"></a>这里是四级标题</h4><h5 id="这里是五级标题"><a href="#这里是五级标题" class="headerlink" title="这里是五级标题"></a>这里是五级标题</h5><h6 id="这里是六级标题"><a href="#这里是六级标题" class="headerlink" title="这里是六级标题"></a>这里是六级标题</h6><hr>
+<p><u>带下划线文本</u> <del>分割线</del></p>
+<hr>
+<ul>
+<li>first</li>
+<li>second</li>
+<li>third </li>
+<li>fourth</li>
+<li>fifth</li>
+</ul>
+<hr>
+<ol>
+<li>first</li>
+<li>second </li>
+<li>third</li>
+<li>fourth</li>
 </ol>
-<h4 id="使用lib需注意两个文件"><a href="#使用lib需注意两个文件" class="headerlink" title="使用lib需注意两个文件"></a>使用lib需注意两个文件</h4><ol>
-<li>.h头文件，包含lib中说明输出的类或符号原型或数据结构。应用程序调用lib时，需要将该文件包含入应用程序的源文件中。</li>
-<li>.LIB文件，略。</li>
+<hr>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素 </li>
+</ul>
+</li>
 </ol>
-<h4 id="使用dll需注意三个文件"><a href="#使用dll需注意三个文件" class="headerlink" title="使用dll需注意三个文件"></a>使用dll需注意三个文件</h4><ol>
-<li>.h头文件，包含dll中说明输出的类或符号原型或数据结构的.h文件。应用程序调用dll时，需要将该文件包含入应用程序的源文件中;</li>
-<li>.LIB文件，是dll在编译、链接成功之后生成的文件，作用是当其他应用程序调用dll时，需要将该文件引入应用程序，否则产生错误;</li>
-<li>.dll文件，真正的可执行文件，开发成功后的应用程序在发布时，只需要有.exe文件和.dll文件，并不需要.lib文件和.h头文件。</li>
+<hr>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
 </ol>
-<h4 id="使用lib的方法"><a href="#使用lib的方法" class="headerlink" title="使用lib的方法"></a>使用lib的方法</h4><ol>
-<li>静态lib中，一个lib文件实际上是任意个obj文件的集合，obj文件是cpp文件编译生成的。在编译这种静态库工程时，根本不会遇到链接错误；即使有错，也只会在使用这个lib的EXT文件或者DLL工程里暴露出来;</li>
-<li>在VC中新建一个static library类型的工程Lib，加入test.cpp文件和test.h文件（头文件内包括函数声明），然后编译，就生成了Lib.lib文件。</li>
-<li>别的工程要使用这个lib有两种方式：在project-&gt;link-&gt;Object/Library Module中加入Lib.lib文件（先查询工程目录，再查询系统Lib目录)；或者在源代码中加入指令#pragma comment(lib, “Lib.lib”);将Lib.lib拷入工程所在目录，或者执行文件生成的目录，或者系统Lib目录中;加入相应的头文件test.h</li>
-</ol>
-<h4 id="使用DLL的方法"><a href="#使用DLL的方法" class="headerlink" title="使用DLL的方法"></a>使用DLL的方法</h4><p>　　使用动态链接中的lib，不是obj文件的集合，即里面不会有实际的实现，它只是提供动态链接到DLL所需要的信息，这种lib可以在编译一个DLL工程时由编译器生成。DLL的使用方法有两种。</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<ul>
+<li>第一项<blockquote>
+<p>列表中使用区块\<br>列表中使用区块的</p>
+</blockquote>
+</li>
+<li>第二项<blockquote>
+<pre><code> 代码 :dfadfadfaeadfaeadfadfadsfasdfafadfadfafadfadfafdfsdfafefadfafadfadfadfadfadfafadfsdfadfadfaefaefadfdvxczvzcvzcvzcvzczvczcvzcvzcvzcvz
+:sdfafasdfadsfadfjaodfjoajdfoajdfajdlfjaldsfjladjfladfladfasdfadfadfadfadfadfadfadfasdfasdfakdfkasdfasjdklfjasl;djfljdfoeihfinfsdnfadfadfadfadfasdfjhjlkjlkjlkjl;jljl;jl;
+ codeblock:dafdfadfadfadfadfadfadfa
+</code></pre><p>codeblock</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"hello again"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight m"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h</span><br></pre></td></tr></table></figure>
+<p><code>cout&lt;&lt;()</code>函数</p>
+<hr>
+<p>这是一个链接 <a href="https://www.aabing.site" target="_blank" rel="noopener">我的博客</a>\<br><a href="https://www.aabing.site" target="_blank" rel="noopener">https://www.aabing.site</a></p>
+<p>这个链接用 1 作为网址变量 [aabing][1].<br>然后在文档的结尾位变量赋值（网址）</p>
+<h2 id="1-https-www-aabing-site"><a href="#1-https-www-aabing-site" class="headerlink" title="[1]: https://www.aabing.site"></a>[1]: <a href="https://www.aabing.site" target="_blank" rel="noopener">https://www.aabing.site</a></h2><table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<p>$$<br>\mathbf {V} _ 1^{2}<br>$$</p>
+<pre class="mermaid">graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]</pre>
+
+<pre class="mermaid">classDiagram
+Class01 <|-- averylongclass="" :="" cool="" <<interface="">> Class01
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  <<service>>
+  int id
+  size()
+}</service></|--></pre>
+
+<pre class="mermaid">stateDiagram
+[*] --> Still
+Still --> [*]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> [*]</pre>
+
+<pre class="mermaid">graph LR
+A[方形] -->B(圆角)
+    B --> C{条件a}
+    C -->|a=1| D[结果1]
+    C -->|a=2| E[结果2]
+    F[横向流程图]</pre>
+
+<pre class="mermaid">graph TD
+A[方形] --> B(圆角)
+    B --> C{条件a}
+    C --> |a=1| D[结果1]
+    C --> |a=2| E[结果2]
+    F[竖向流程图]</pre>
+
+<div id="flowchart-0" class="flow-chart"></div>
+
+<div id="flowchart-1" class="flow-chart"></div>
+
+<pre class="mermaid">sequence
+对象A->对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B-->对象A: 我很好(响应)
+对象A->对象B: 你真的好吗？</pre>
+
+<pre class="mermaid">sequence
+Title: 标题：复杂使用
+对象A->对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B-->对象A: 我很好(响应)
+对象B->小三: 你好吗
+小三-->>对象A: 对象B找我了
+对象A->对象B: 你真的好吗？
+Note over 小三,对象B: 我们是朋友
+participant C
+Note right of C: 没人陪我玩</pre>
+
+<pre class="mermaid">%% 时序图例子,-> 直线，-->虚线，->>实线箭头
+  sequenceDiagram
+    participant 张三
+    participant 李四
+    张三->王五: 王五你好吗？
+    loop 健康检查
+        王五->王五: 与疾病战斗
+    end
+    Note right of 王五: 合理 食物 <br>看医生...
+    李四-->>张三: 很好!
+    王五->李四: 你怎么样?
+    李四-->王五: 很好!</pre>
+
+<pre class="mermaid">%% 语法示例
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h</pre>
+<pre class="mermaid">    sequenceDiagram
+        Alice->>John: Hello John, how are you?
+        loop Healthcheck
+            John->>John: Fight against hypochondria
+        end
+        Note right of John: Rational thoughts!
+        John-->>Alice: Great!
+        John->>Bob: How about you?
+        Bob-->>John: Jolly good!</pre>
+
+<p>[1]: <a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st->op->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st(right)->op(right)->cond
+cond(yes)->io(bottom)->e
+cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script></p>
 
       
     </div>
@@ -469,8 +691,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/08/13/" rel="next" title="windows10+github+vs2017配置">
-                <i class="fa fa-chevron-left"></i> windows10+github+vs2017配置
+              <a href="/2018/09/22/20/" rel="next" title="无题">
+                <i class="fa fa-chevron-left"></i> 无题
               </a>
             
           </div>
@@ -479,8 +701,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/08/10/" rel="prev" title="凝固在时间里的主宰">
-                凝固在时间里的主宰 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/14/22/" rel="prev" title="testAdmin">
+                testAdmin <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -661,7 +883,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于lib和dll的区别如下"><span class="nav-number">1.</span> <span class="nav-text">关于lib和dll的区别如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用lib需注意两个文件"><span class="nav-number">2.</span> <span class="nav-text">使用lib需注意两个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用dll需注意三个文件"><span class="nav-number">3.</span> <span class="nav-text">使用dll需注意三个文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用lib的方法"><span class="nav-number">4.</span> <span class="nav-text">使用lib的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用DLL的方法"><span class="nav-number">5.</span> <span class="nav-text">使用DLL的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这里是一级标题"><span class="nav-number">1.</span> <span class="nav-text">这里是一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这里是二级标题"><span class="nav-number">1.1.</span> <span class="nav-text">这里是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这里是三级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">这里是三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#这里是四级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">这里是四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#这里是五级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">这里是五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#这里是六级标题"><span class="nav-number">1.1.1.1.1.1.</span> <span class="nav-text">这里是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-https-www-aabing-site"><span class="nav-number">1.2.</span> <span class="nav-text">[1]: https://www.aabing.site</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -847,7 +1069,7 @@ var jiathis_config={
 		_hcwp.push({widget:"Bloggerstream", widget_id: 102560, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 102560, xid: "2018/04/08/14/"});
+		_hcwp.push({widget:"Stream", widget_id: 102560, xid: "2019/12/13/21/"});
 		
 
 		(function() {
