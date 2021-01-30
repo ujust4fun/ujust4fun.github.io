@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  21
+                  22
                 </span>
               
 
@@ -402,7 +402,7 @@
       
 
       
-        <link href="/style.css" rel="stylesheet" type="text/css"><script src="/crypto-js.js"></script><script src="/mcommon.js"></script><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <div id="security"> <div> <div class="input-container"> <input type="password" class="form-control" id="pass" placeholder=" Welcome to my blog, enter password to read!. "/> <label for="pass"> Welcome to my blog, enter password to read!. </label> <div class="bottom-line"></div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX18rV6UASRyDfnJ+bZC8szEk/nHiXcwIzPdiZtZDMYoI4NPq0/FDSwFaMKCaARr40c55vr5cTo2F1jhjteRVcPwca4sXUvY+crkKkCexL0Nij4KcpIsS1+s5Mub1IV0ZBTFVUvoxBjX+8ogVlh1+5DlpwyATyxD9zsWrpioBXIvsOn4zwxjQ9bcdFJ22xq/X3L+tGaTHoIBLPYcTyNAR/78V9Rd9yrFwq9mVvTvyP3pq6zgTBV94HRW2qMbIui+/bH7hSLeVHcNoUAiiblTE89dpAP2JbleqhEa/UfW2vPPGvW5MXhvGyUNXowlPVP45Pr9OFx915lfBdsJhBeCWPGeKfXbi4ND8jGQ= </div>
+        <link href="/style.css" rel="stylesheet" type="text/css"><script src="/crypto-js.js"></script><script src="/mcommon.js"></script><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <div id="security"> <div> <div class="input-container"> <input type="password" class="form-control" id="pass" placeholder=" Welcome to my blog, enter password to read!. "/> <label for="pass"> Welcome to my blog, enter password to read!. </label> <div class="bottom-line"></div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1+41Mvjsxbq/NetO5+NYOgAMZwMJW3DOjJXrnXV6EF5fXnjRojV9jF4cNmdKgnXuRsk6mQqNZeZfZfGv7VSZGq8FwnwNUZk/z6QpEehTRhnafPTfJnIsWyAs2qqNR+2meFH+UMu4GQw7UtVY15cpKqAl3r5klk71vYmYWLb9ItVqYIvln47cDkwZMiTk3PS9NpTHYBlcAzZWy3tc4zC1lGASBpyk5VSTkZSx/hZ3B6yzZKEikMuw44hl85LnfaCuw695GzNr9uImKnQEJoo2+xIrXuhBSWPnEv6UZe8lFo/UpNP/53CpTsPOlaM6fAgeyMubDMptFusjn14T//fgd+hBt6M/3lSQAU= </div>
       
     </div>
     
@@ -824,6 +824,48 @@ var jiathis_config={
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'ujust4fun',
+            repo: 'ujust4fun.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3f61ec3e9c6d12562f14ed15d027aa474ae7007b# EITHER this or proxy_gateway, Github access secret token for the Gitment',
+            
+                client_id: '7fce79267a3e31558db5# MUST HAVE, Github client id for the Gitment'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
