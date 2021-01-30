@@ -324,17 +324,15 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/04/08/14/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/04/08/14/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/08/14/" itemprop="commentsCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -536,7 +534,9 @@ var jiathis_config={
 
   
     <div class="comments" id="comments">
-      <div id="hypercomments_widget"></div>
+      
+        <div id="gitment-container"></div>
+      
     </div>
 
   
@@ -841,31 +841,17 @@ var jiathis_config={
 
 	
 
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 102560, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 102560, xid: "2018/04/08/14/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/102560/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
-
-	
 
 
 
 
+  
+
+
+
+
+
+  
 
 
 
@@ -900,12 +886,12 @@ var jiathis_config={
             
             oauth: {
             
-                redirect_protocol: 'https//:www.aabing.site',
+                redirect_protocol: 'https://www.aabing.site',
             
             
-                client_secret: '3f61ec3e9c6d12562f14ed15d027aa474ae7007b',
+                client_secret: '3f61ec3e9c6d12562f14ed15d027aa474ae7007b# EITHER this or proxy_gateway, Github access secret token for the Gitment',
             
-                client_id: '7fce79267a3e31558db5'
+                client_id: '7fce79267a3e31558db5# MUST HAVE, Github client id for the Gitment'
             }});
         gitment.render('gitment-container');
       }
