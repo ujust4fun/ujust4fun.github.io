@@ -401,7 +401,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX19dsrn0aSSXjokT63LiSs88J7Ua0u9LKdFrHFSITDNL+F4sBizeYHMjvg2w/btdAXeKzVo/b/f+1OrY7H+Mx+9lxhiVc2peMOilqJsEggCzIKTehDjpf/VdUowrMD8JZupRU4Zbwxt0GX/FUmuKJ4zA5HWBD0SZCtOTuvS5rQy5Zy8nytqfGwgfPEMA5g697cPl/q96nf4Ul3bEjklQrDz1a0/PxeT16dTUqr2WmMYBZCYL57SfFDJbwd9ZSLmfQY5ciqI7m01wh3HGkfGou9Y3I9b4LGC173t9p72X1g9CczdNqrFD/P/6bkvlvAFXGQtVmZaHQzK1G6psUsVfWTnO+a/FBhfnlR0=
+U2FsdGVkX18z/LWGNbzlbsXm9bn1Ixs2fE1cSRKuvg9ApxPIeu9rKqREsgQ3vGF7JexrsnYTWvmG4hxjbb+P/64s8Lz9gfoe65tUA0c9AWKIaHeXF66HkhyO9pNGTd53Y8jxqNZVOt8nbFUCQCckNs69zkJHYDQVfMkj/DHyRULxJI+sHHcfIsltdZv6ehmHnfDIxt/Z5WienHHkITQX20sscYb/R1xLOFl/ztpzK7s/fcF7uJOco4HNZF4UQs0SVQ+ZtIdHMwfnH7FMHvo6k+G5IUsde/wFFTPiFRyyJu36EFILEhrfP/Pdh6sG+zfTBF+yF6a4XN7gKBVysFoDslHfx6AxXqkMNEPZcc69ewo=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -554,7 +554,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -661,6 +661,25 @@ var jiathis_config={
       mermaid.initialize("");
     }
   </script>
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Easy doesn't enter into grown-up life.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("02/01/2018 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
 
 
         
