@@ -328,17 +328,6 @@
 
           
           
-             <span id="/2018/04/08/10/" class="leancloud_visitors" data-flag-title="凝固在时间里的主宰">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -353,7 +342,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  26
+                  23
                 </span>
               
 
@@ -401,7 +390,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX189QSN3o4LX3452ggp+GL0lR36tokLXiyqkczvRJeGUNtn0L9mn4pw/B8mCUNODMlj+18InErh6G4SQclSsfBcTN+dW6D0DLUHmR3SSBXLS4eWXBQbdMP7qOT+xmHr8orvqIVi9eLv84XxX7lSSdjK4d4GFdy8Lky1EqGDM8bW4x7IlwTAceRy9TYGd7o+uCekjYsREsYAW8rMS1Ypjn+WhRom0+uZRJlernCB/gT0LZvFw8arvhb458ckYwa2haiHdF1mkwZh8MPcdNKa/v4Y8A1QaHes0PKFeY6ussNLalzfwr+ezhzD2c28B07QW6kXULYpE6jmpJUEMOD9gGaPOgh8ZWXUndOc=
+U2FsdGVkX19mFMi3QaLtLwumYyzoiWXrJkJhBxPzBuCki2z7AVm0BmHDgIBdnSO50dzFZBLhBH3pMljk34bW8NQy6YVom6h4vlIqevXO/EdX7f6HtaCUYhdz6b9znJyWVGvhu0gBuaTbaANsS0gdfc5KSIR50fgb+FJoRffeXxMwc6JyMDeHlXp43z0g99Y61IZN4K0Cv1DU2lP030qZ5j4bImsmmVupSS0L9+hYucJgkBGMMGWTda19HPx+mYht0qY/fvM0bl7Xu4r8MeGEaFnKLDPbpw2vYMoWE0qU30bfzt/2q/7QigsoO2Un2waEsYq+8ap08Lmu2RNBp7z93OkolfRzxDqaD8auH7ySlj0=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -602,7 +591,15 @@ var jiathis_config={
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://jiazehua.net/" title="阿菊的小事" target="_blank">阿菊的小事</a>
+                    <a href="https://www.baidu.com/" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.google.com/" title="Google" target="_blank">Google</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.bing.com/" title="Bing" target="_blank">Bing</a>
                   </li>
                 
               </ul>
@@ -837,113 +834,6 @@ setInterval("createtime()",250);
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("LRlHYEB5zjaMj1RFOsl93lxG-gzGzoHsz", "2FIPUptoxamBkzqRCURc1Ddx");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
