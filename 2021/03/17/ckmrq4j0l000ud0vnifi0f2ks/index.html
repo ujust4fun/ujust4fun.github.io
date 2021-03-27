@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="提升hexo在本地计算机上使用的便携性。">
+<meta name="description" content="what is the difference between the “nominal plant model” and the “plant model”?  &amp;gt;You design your control for the nominal model, i.e., for the model where you assume that you know all the parameter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于hexo博客的便捷式改进">
-<meta property="og:url" content="https://ujust4fun.github.io/2021/02/07/ckmroyf1z0012ykvn8l8ksi7g/index.html">
+<meta property="og:title" content="nominal plant">
+<meta property="og:url" content="https://ujust4fun.github.io/2021/03/17/ckmrq4j0l000ud0vnifi0f2ks/index.html">
 <meta property="og:site_name" content="阿炳的深渊小屋">
-<meta property="og:description" content="提升hexo在本地计算机上使用的便携性。">
+<meta property="og:description" content="what is the difference between the “nominal plant model” and the “plant model”?  &amp;gt;You design your control for the nominal model, i.e., for the model where you assume that you know all the parameter">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-02-07T11:51:55.643Z">
+<meta property="og:updated_time" content="2021-03-25T13:31:06.815Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于hexo博客的便捷式改进">
-<meta name="twitter:description" content="提升hexo在本地计算机上使用的便携性。">
+<meta name="twitter:title" content="nominal plant">
+<meta name="twitter:description" content="what is the difference between the “nominal plant model” and the “plant model”?  &amp;gt;You design your control for the nominal model, i.e., for the model where you assume that you know all the parameter">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://ujust4fun.github.io/2021/02/07/ckmroyf1z0012ykvn8l8ksi7g/">
+  <link rel="canonical" href="https://ujust4fun.github.io/2021/03/17/ckmrq4j0l000ud0vnifi0f2ks/">
 
 
 
 
 
-  <title>关于hexo博客的便捷式改进 | 阿炳的深渊小屋</title>
+  <title>nominal plant | 阿炳的深渊小屋</title>
   
 
 
@@ -261,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2021/02/07/ckmroyf1z0012ykvn8l8ksi7g/">
+    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2021/03/17/ckmrq4j0l000ud0vnifi0f2ks/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="阿炳">
@@ -278,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于hexo博客的便捷式改进</h1>
+          <h1 class="post-title" itemprop="name headline">nominal plant</h1>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-07T19:13:00+08:00">
-                2021-02-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-17T15:00:00+08:00">
+                2021-03-17
               </time>
             
 
@@ -313,8 +313,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
+                  <a href="/categories/Control-Theory/" itemprop="url" rel="index">
+                    <span itemprop="name">Control Theory</span>
                   </a>
                 </span>
 
@@ -344,7 +344,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  185
+                  256
                 </span>
               
 
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -381,37 +381,13 @@
       
 
       
-        <p>提升hexo在本地计算机上使用的便携性。<br><a id="more"></a></p>
-<h3 id="hexo-admin安装"><a href="#hexo-admin安装" class="headerlink" title="hexo-admin安装"></a>hexo-admin安装</h3><ol>
-<li>安装hexo-admin插件；</li>
-<li>config.yml中设置admin登录的用户名，密码，密文</li>
-<li>设置deployCommand命令，设置后即可通过web端deploy</li>
-</ol>
-<h3 id="本地启动node服务"><a href="#本地启动node服务" class="headerlink" title="本地启动node服务"></a>本地启动node服务</h3><ol>
-<li>创建vbs脚本<blockquote>
-<p>set ws=WScript.CreateObject(“WScript.Shell”)</p>
-<p>ws.Run “D:\Blog\hexo\hexo-server.bat /start”,0</p>
-</blockquote>
-</li>
-<li><p>创建bat脚本</p>
+        <p>what is the difference between the “nominal plant model” and the “plant model”?</p>
 <blockquote>
-<p>D:</p>
-<p>cd D:/Blog//hexo</p>
-<p>hexo s -d</p>
+<p>&gt;<br>You design your control for the nominal model, i.e., for the model where you assume that you know all the parameters, or where you use some averages of what the parameters should be.</p>
+<p>In practice, you use only this model, and no other model is available. However, the real plant (for sure) differs from your model: it can have different values of the parameters (parametric uncertainties) or some unmodelled dynamics, e.g., the senor’s inertia. These uncertainties define how and why the real plant is not the same as the nominal one that you have used for control design, and why your real signals are not as good as the simulations results.</p>
+<p>At this moment, you ask: well, can I check in advance how does my controller deal with all these uncertainties? Yes, to do so you need a model of the plant that is different from the nominal one, e.g., it considers possible saturations. Then you test you nominal controller (the one that you have designed for the nominal plant) for various plant models with different parameters and so on. It gives you some ideas about the sensitivity of your controller with respect to uncertainties. And finally, you apply your controller to the real plant and hope it will work.</p>
+<p>To summarize, you use the nominal model for control design, you use plant models to test your design against uncertainties, and you apply your controller to a real plant.</p>
 </blockquote>
-</li>
-<li><p>vbs放在目录</p>
-<blockquote>
-<p>C:\Users\$username$\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p>
-</blockquote>
-</li>
-<li><p>bat放在目录</p>
-<blockquote>
-<p>D:\Blog\hexo</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h3><p>如果本地设置了ssh私钥的密码，则上述配置deploy时node会意外退出；但是如果通过gitbash打开server端后deploy则不会出现该问题。<br>我怀疑是vbs脚本这里中WScript有点问题。</p>
 
       
     </div>
@@ -457,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/02/04/24/" rel="next" title="家务总结(一)">
-                <i class="fa fa-chevron-left"></i> 家务总结(一)
+              <a href="/2021/03/10/ckmrq4j0n000wd0vnv3ohsora/" rel="next" title="《商鞅徙木立信论》">
+                <i class="fa fa-chevron-left"></i> 《商鞅徙木立信论》
               </a>
             
           </div>
@@ -467,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/02/09/ckmroyf1y0011ykvnzattkaq6/" rel="prev" title="《重读毛泽东》读书笔记(一)">
-                《重读毛泽东》读书笔记(一) <i class="fa fa-chevron-right"></i>
+              <a href="/2021/03/25/ckmrq4j0w0012d0vn3737j8dw/" rel="prev" title="《创业基础》 二">
+                《创业基础》 二 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -545,17 +521,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -647,22 +614,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-admin安装"><span class="nav-number">1.</span> <span class="nav-text">hexo-admin安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地启动node服务"><span class="nav-number">2.</span> <span class="nav-text">本地启动node服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug"><span class="nav-number">3.</span> <span class="nav-text">Bug</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
