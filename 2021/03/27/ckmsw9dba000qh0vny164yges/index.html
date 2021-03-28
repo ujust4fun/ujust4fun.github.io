@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="提升hexo在本地计算机上使用的便携性。">
+<meta name="description" content="windows10家庭版，局域网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于hexo博客的便捷式改进">
-<meta property="og:url" content="https://ujust4fun.github.io/2021/02/07/ckmrqeshl000xucvnp7dli65m/index.html">
+<meta property="og:title" content="FTP服务器搭建">
+<meta property="og:url" content="https://ujust4fun.github.io/2021/03/27/ckmsw9dba000qh0vny164yges/index.html">
 <meta property="og:site_name" content="阿炳的深渊小屋">
-<meta property="og:description" content="提升hexo在本地计算机上使用的便携性。">
+<meta property="og:description" content="windows10家庭版，局域网">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-02-07T11:51:55.643Z">
+<meta property="og:updated_time" content="2021-03-28T08:21:52.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于hexo博客的便捷式改进">
-<meta name="twitter:description" content="提升hexo在本地计算机上使用的便携性。">
+<meta name="twitter:title" content="FTP服务器搭建">
+<meta name="twitter:description" content="windows10家庭版，局域网">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://ujust4fun.github.io/2021/02/07/ckmrqeshl000xucvnp7dli65m/">
+  <link rel="canonical" href="https://ujust4fun.github.io/2021/03/27/ckmsw9dba000qh0vny164yges/">
 
 
 
 
 
-  <title>关于hexo博客的便捷式改进 | 阿炳的深渊小屋</title>
+  <title>FTP服务器搭建 | 阿炳的深渊小屋</title>
   
 
 
@@ -261,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2021/02/07/ckmrqeshl000xucvnp7dli65m/">
+    <link itemprop="mainEntityOfPage" href="https://ujust4fun.github.io/2021/03/27/ckmsw9dba000qh0vny164yges/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="阿炳">
@@ -278,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于hexo博客的便捷式改进</h1>
+          <h1 class="post-title" itemprop="name headline">FTP服务器搭建</h1>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-07T19:13:00+08:00">
-                2021-02-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-27T19:52:55+08:00">
+                2021-03-27
               </time>
             
 
@@ -300,28 +300,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -344,7 +322,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  185
+                  13
                 </span>
               
 
@@ -381,37 +359,19 @@
       
 
       
-        <p>提升hexo在本地计算机上使用的便携性。<br><a id="more"></a></p>
-<h3 id="hexo-admin安装"><a href="#hexo-admin安装" class="headerlink" title="hexo-admin安装"></a>hexo-admin安装</h3><ol>
-<li>安装hexo-admin插件；</li>
-<li>config.yml中设置admin登录的用户名，密码，密文</li>
-<li>设置deployCommand命令，设置后即可通过web端deploy</li>
-</ol>
-<h3 id="本地启动node服务"><a href="#本地启动node服务" class="headerlink" title="本地启动node服务"></a>本地启动node服务</h3><ol>
-<li>创建vbs脚本<blockquote>
-<p>set ws=WScript.CreateObject(“WScript.Shell”)</p>
-<p>ws.Run “D:\Blog\hexo\hexo-server.bat /start”,0</p>
-</blockquote>
-</li>
-<li><p>创建bat脚本</p>
-<blockquote>
-<p>D:</p>
-<p>cd D:/Blog//hexo</p>
-<p>hexo s -d</p>
-</blockquote>
-</li>
-<li><p>vbs放在目录</p>
-<blockquote>
-<p>C:\Users\$username$\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p>
-</blockquote>
-</li>
-<li><p>bat放在目录</p>
-<blockquote>
-<p>D:\Blog\hexo</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h3><p>如果本地设置了ssh私钥的密码，则上述配置deploy时node会意外退出；但是如果通过gitbash打开server端后deploy则不会出现该问题。<br>我怀疑是vbs脚本这里中WScript有点问题。</p>
+        <p>windows10家庭版，局域网<br><a id="more"></a><br>参考B站视频<br>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=17140975&bvid=BV1vW411h7DQ&cid=28005011&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div>
+
+</p>
+
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=10495368&bvid=BV1Cx411e73R&cid=17331535&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div>
+
 
       
     </div>
@@ -457,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/02/04/24/" rel="next" title="家务总结(一)">
-                <i class="fa fa-chevron-left"></i> 家务总结(一)
+              <a href="/2021/03/25/ckmsw9dbw0012h0vn5663e9z3/" rel="next" title="《创业基础》 二">
+                <i class="fa fa-chevron-left"></i> 《创业基础》 二
               </a>
             
           </div>
@@ -466,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/02/09/ckmrqeshm000yucvn5r7gomvl/" rel="prev" title="《重读毛泽东》读书笔记(一)">
-                《重读毛泽东》读书笔记(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,17 +501,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -647,22 +594,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-admin安装"><span class="nav-number">1.</span> <span class="nav-text">hexo-admin安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地启动node服务"><span class="nav-number">2.</span> <span class="nav-text">本地启动node服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bug"><span class="nav-number">3.</span> <span class="nav-text">Bug</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
